@@ -24,6 +24,7 @@
 		7DAEA864261F2CF2004AB2AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DAEA867261F2CF2004AB2AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DAEA869261F2CF2004AB2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DAEA86F261F2D4D004AB2AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		7DAEA85A261F2CF0004AB2AD /* RPS */ = {
 			isa = PBXGroup;
 			children = (
+				7DAEA86F261F2D4D004AB2AD /* README.md */,
 				7DAEA85B261F2CF0004AB2AD /* AppDelegate.swift */,
 				7DAEA85D261F2CF0004AB2AD /* SceneDelegate.swift */,
 				7DAEA85F261F2CF0004AB2AD /* ViewController.swift */,
