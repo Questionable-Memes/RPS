@@ -21,8 +21,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="Nb8-dB-Yst">
-                                <rect key="frame" x="45" y="380" width="325" height="333.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Nb8-dB-Yst">
+                                <rect key="frame" x="45" y="307" width="325" height="406.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-yb-jUg">
                                         <rect key="frame" x="129.5" y="0.0" width="66.5" height="33.5"/>
@@ -30,8 +30,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qWi-B4-WtB">
-                                        <rect key="frame" x="0.0" y="112.5" width="325" height="96"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qWi-B4-WtB">
+                                        <rect key="frame" x="0.0" y="78.5" width="325" height="96"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ME6-2J-G2y">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="96"/>
@@ -59,8 +59,29 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="v3K-XG-sIV">
+                                        <rect key="frame" x="62.5" y="219.5" width="200" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgy-Ww-bff">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="96"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                                <state key="normal" title="🦎"/>
+                                                <connections>
+                                                    <action selector="lizardChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xlX-lk-vdb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-lp-MMC">
+                                                <rect key="frame" x="125" y="0.0" width="75" height="96"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                                <state key="normal" title="🖖"/>
+                                                <connections>
+                                                    <action selector="spockChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Led-Oc-hsZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAg-3X-Mln">
-                                        <rect key="frame" x="99" y="287.5" width="127" height="46"/>
+                                        <rect key="frame" x="99" y="360.5" width="127" height="46"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <state key="normal" title="Play Again"/>
                                         <connections>
@@ -72,7 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Nb8-dB-Yst" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vay-91-Jrt" secondAttribute="bottom" constant="142" id="Zhw-TA-g3s"/>
+                            <constraint firstItem="Nb8-dB-Yst" firstAttribute="top" relation="lessThanOrEqual" secondItem="vay-91-Jrt" secondAttribute="bottom" constant="142" id="Zhw-TA-g3s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nb8-dB-Yst" secondAttribute="trailing" constant="44" id="cE5-tW-haD"/>
                             <constraint firstItem="vay-91-Jrt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="ceE-zS-zKv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vay-91-Jrt" secondAttribute="trailing" constant="126" id="e77-Td-DoJ"/>
@@ -84,11 +105,13 @@
                     </view>
                     <connections>
                         <outlet property="gameStatus" destination="z9L-yb-jUg" id="Cdr-8B-FdN"/>
+                        <outlet property="lizard" destination="Qgy-Ww-bff" id="P6I-3h-3kb"/>
                         <outlet property="opponentSign" destination="vay-91-Jrt" id="Y3S-nd-1Jf"/>
                         <outlet property="paper" destination="ZJ3-lq-8n8" id="vUj-xK-sfC"/>
                         <outlet property="playAgain" destination="GAg-3X-Mln" id="Q2r-Ao-iDm"/>
                         <outlet property="rock" destination="ME6-2J-G2y" id="62s-Hz-YGO"/>
                         <outlet property="scissors" destination="FDl-6X-Nsc" id="AEI-Te-kkd"/>
+                        <outlet property="spock" destination="lCr-lp-MMC" id="INq-Hf-AAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

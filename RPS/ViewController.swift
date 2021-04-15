@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var rock: UIButton!
     @IBOutlet weak var paper: UIButton!
     @IBOutlet weak var scissors: UIButton!
+    @IBOutlet weak var lizard: UIButton!
+    @IBOutlet weak var spock: UIButton!
     
     @IBOutlet weak var playAgain: UIButton!
     
@@ -39,6 +41,12 @@ class ViewController: UIViewController {
     @IBAction func scissorsChosen(_ sender: Any) {
         player(userSign: .scissors)
     }
+    @IBAction func lizardChosen(_ sender: Any) {
+        player(userSign: .lizard)
+    }
+    @IBAction func spockChosen(_ sender: Any) {
+        player(userSign: .spock)
+    }
     @IBAction func playAgainButton(_ sender: Any) {
         updateUI(forState: .start)
     }
@@ -58,10 +66,14 @@ class ViewController: UIViewController {
             rock.isHidden = false
             paper.isHidden = false
             scissors.isHidden = false
+            lizard.isHidden = false
+            spock.isHidden = false
             
             rock.isEnabled = true
             paper.isEnabled = true
             scissors.isEnabled = true
+            lizard.isEnabled = true
+            spock.isEnabled = true
             
         case .win:
             view.backgroundColor = .green
@@ -86,10 +98,14 @@ class ViewController: UIViewController {
         rock.isHidden = true
         paper.isHidden = true
         scissors.isHidden = true
+        lizard.isHidden = true
+        spock.isHidden = true
         
         rock.isEnabled = false
         paper.isEnabled = false
         scissors.isEnabled = false
+        lizard.isEnabled = false
+        spock.isEnabled = false
         
         switch userSign {
         case .rock:
@@ -98,6 +114,10 @@ class ViewController: UIViewController {
             paper.isHidden = false
         case .scissors:
             scissors.isHidden = false
+        case .lizard:
+            lizard.isHidden = false
+        case .spock:
+            spock.isHidden = false
         }
         
         playAgain.isHidden = false
